@@ -1,0 +1,93 @@
+{
+	"customers": [
+		{
+			"id": "13667f62-03d6-4b46-bd22-0bbf2a3b89d2",
+			"name": "Cliente TESTE",
+			"email": "test@gmail.com",
+			"password": "$2b$12$qmFqKwOkAfdQLy04VBtOLObd6FUU7H2P3XKa1f95JbKlLgjyOy4kG",
+			"cpf": "42424242",
+			"rg": "23232323",
+			"birthday": "23/09/1997",
+			"phone": {
+				"number": "999998888",
+				"ddd": "11",
+				"country": "+55"
+			},
+			"address": {
+				"zipcode": "17980-000",
+				"street": "Rua Presidente Nasser",
+				"street_number": "2018",
+				"neighborhood": "Centro",
+				"city": "Panorama",
+				"state": "SP"
+			},
+			"plan": {
+				"name": "200 MEGA",
+				"price": 10990,
+				"active": true,
+				"payment_type": "BOLETO",
+				"roteador": "GR345-123-456",
+				"onu": "PLR-CR45-123",
+				"instaled_at": "29/09/2021 08:30",
+				"date_start": "02/10/2021",
+				"date_end": "05/11/2022"
+			},
+			"created_at": "28/09/2021 10:52:14",
+			"updated_at": "28/09/2021 15:04:17"
+		}
+	],
+	"blog": [
+		{
+			"id": 1,
+			"title": "O que é Internet Fibra Óptica?",
+			"resume": "Mas afinal o que é fibra óptica? É uma tecnologia que possibilita a transmissão de dados, voz e vídeo com excelência. Além de ser ultrarrápida, pois a transferência de informações recebidas e enviadas é na velocidade da luz. A velocidade é apenas um dos motivos pelos quais, a conexão de cobre tem sido substituída por fibra óptica. ",
+			"image": "https://picsum.photos/id/1/230/230",
+			"category": "software",
+			"body": "<h3>O que é fibra ótica?</h3><p><p>A fibra ótica é uma estrutura de vidro cilíndrica, transparente, flexível e com dimensões microscópicas, parecidas com um fio de cabelo. É uma forma de transmissão que permite o tráfego de dados com velocidades próximas à velocidade da luz. O sinal da fibra ótica é transmitido por meio de reflexões de raios laser ao longo de todo o cabo, atingindo uma capacidade de transmissão única.</p></p><h3>Por que a fibra é superior a outras tecnologias?</h3><p>A fibra ótica oferece maior velocidade de transmissão de dados, maior estabilidade de sinal e menos quedas de transmissão do que as outras tecnologias, proporcionando:</p><ul><li>Maior desempenho para jogar, assistir a filmes e séries online e baixar arquivos;</li><li>Ultravelocidade para download e upload de fotos e vídeos;</li><li>Mais estabilidade ao acessar a internet de vários dispositivos ao mesmo tempo.</li></ul><h3>O que significa a expressão “FTTx”?</h3><p><strong>FTTx </strong>é a sigla do original em inglês <em>“Fiber to the x”</em>, que pode ser traduzido como <em>“fibra para um ponto específico x”</em>. A utilização da sigla indica que a rede de acesso é baseada em cabos de fibra ótica, que aumentam a velocidade e estabilidade na transferência de dados. A viabilidade de atendimento está sujeita a disponibilidade técnica e pode se dar das seguintes formas:</p><ol><li><strong>FTTH (“<em>Fiber to the home</em>”)</strong> corresponde à utilização da fibra até o interior da residência do usuário final, que conta com uma fibra óptica para o seu acesso.</li><li><strong>FTTA (“<em>Fiber to the apartment</em>”)</strong> corresponde à utilização da fibra até o interior do apartamento do usuário final, que conta com uma fibra óptica para o seu acesso.</li><li><strong>FTTC (<em>“Fiber to the curb”</em>)</strong> corresponde à utilização da fibra ótica até um armário situado próximo ao cliente, sendo distribuído até o usuário final através da tecnologia VDSL2*.</li><li><strong>FTTN (<em>“Fiber to the node”</em>)</strong> corresponde à utilização da fibra ótica até um armário situado próximo do cliente, sendo distribuído até o usuário final através da tecnologia VDSL2*, porém com equipamento de maior capacidade de clientes.</li><li><strong>FTTB (<em>“Fiber to the building”</em>)</strong> corresponde à utilização da fibra até a sala de equipamentos localizada no interior do edifício, sendo distribuído até o usuário final através da tecnologia VDSL2*.</li></ol><p><strong>*VDSL2</strong> <em>(Very-High-Bit-Rate Digital Subscriber Line 2)</em> é um padrão tecnológico de acesso que explora a infraestrutura existente dos fios de cobre.</p><img src='https://www.vivo.com.br/content/dam/vivo-sites/vivo-com-br/homepage/imagens/destaques/faq-fibra-explicacao-fttx.jpg' class='w-100 image-fluid'>",
+			"comments": [],
+			"slug": "o-que-e-internet-fibra-optica",
+			"created_at": "01/10/2021 14:35:09",
+			"updated_at": "01/10/2021 15:49:33"
+		},
+		{
+			"id": 2,
+			"title": "Como Funciona a Velocidade da Internet",
+			"resume": "Muitos clientes não sabem e confundem a velocidade de internet, baseando-se em o que é contratado e a velocidade de download. Essa postagem vai sanar suas dúvidas!",
+			"image": "https://picsum.photos/id/2/230/230",
+			"category": "software",
+			"body": "<p>Muitos clientes confundem a velocidade de internet, baseando-se em o que é contratado e a velocidade de download. Essa postagem vai sanar suas dúvidas!</p><h3> O que é velocidade de internet?</h3><p>Velocidade, o número que lhe vendem (5 Mbps por exemplo)</p><p>A velocidade de internet é a sua largura de banda. Largura de banda é a quantidade de dados que pode ser enviada, normalmente medido em segundos. Por exemplo, 5 Mbps significa que você pode receber até 5 megabits de dados por segundo.</p><p>Não podemos esquecer que na banda larga não só recebemos mas também enviamos, vou falar sobre isso também.</p><h3>Como a largura de banda funciona?</h3><p>A melhor maneira de entender como largura de banda e a velocidade da internet funciona é usando uma analogia.</p><p>Imagine uma rodovia e todos os carros viajam na mesma velocidade, portanto para tornar mais rápida a via tem que ser mais ampla.</p><p>Em outras palavras, digamos 1 Mbps é o equivalente a uma auto-estrada 1 pista. E vamos dizer que você estava tentando baixar uma imagem, que é de 5 MB de tamanho. Então, se você teve uma largura de banda de 1 Mbps (1 pista freeway) demoraria cerca de 50 segundos para fazer download da imagem.</p><p>Agora vamos dizer que você tem uma conexão de 5 Mbps, ou uma auto-estrada de 5 pistas. Quão rápido você receberá a sua imagem?</p><p>10 segundos aproximadamente.</p><p>Tudo o que disse, não existe apenas uma velocidade de internet. No entanto, real “velocidade à Internet” tem a ver com latência e esse tema está fora do escopo deste artigo.</p><h3>O que é KBps, Mbps, MBps e GBps?</h3><p>Outro aspecto desconcertante de compras de internet com base em velocidades são todos os termos ou abreviaturas sendo usado: KBps, Mbps, MBps, GBps. O que tudo isso significa?</p><p>Estas são as abreviaturas para a quantidade de dados que está sendo enviado por segundo. Aqui está o que cada um deles significa. Abaixo disso eu esbocei um guia de conversão básica e uma idéia aproximada de como grande é cada pedaço de dados que você consome.</p><p>kbps – kilobits por segundo.</p><p>Mbps ou mbps – megabits por segundo. Algumas pessoas confundem isso com megabytes.</p><p>A diferença entre os dois é a forma como o “b” é escrito na abreviatura; Mbps = megabits e MBps = megabytes. Esta é a unidade mais comum de velocidade utilizada.</p><ul><li>MBps – Megabytes por segundo.</li><li>Gbps – Gigabits por segundo.</li></ul><h3>Conversão de Unidades de Internet de Banda</h3><p>Para lhe dar uma idéia melhor quanto maior ou pequena cada unidade de velocidade (banda larga) é, aqui está uma tabela de conversão útil.</p><ul><li>Bytes ==> Bits: Multiplique por 8</li><li>Bits ==> Bytes: Divida por 8</li><li>Mega ==> Kilo: Multiplique por mil</li><li>Kilo ==> mega: Divida por 1000</li><li>Giga ==> mega: Multiplique por mil</li><li>Mega ==> Giga: Divida por 1000</li><li>Giga ==> Kilo: Multiplicar por 1.000.000</li><li>Kilo ==> Giga: Divida por 1.000.000</li></ul><h3>Unidades de largura de banda e os dados usados</h3><p>Aqui estão algumas coisas que você faz na internet e quantsão consumidos:</p><ul><li>Web Page 1 – 1 MB</li><li>1 Text Email – .97 MB</li><li>10 Min YouTube Video – 43 MB</li><li>Baixe 1 Imagem – 2,5 MB</li><li>30 Min de Gaming – 2,5 MB</li></ul><p>Há uma série de coisas que afetam a velocidade da sua internet.</p><h3>Tipo de Conexão</h3><p>Tipo de ligação desempenha um grande papel na forma como rápido de uma conexão de internet que você terá.</p><h3>Tráfego congestionado</h3><p>De qualquer forma, sua internet pode se tornar congestionada apenas como uma rodovia poderia. Quanto mais dados (ou carros) que está sendo solicitados e enviados, o mais largura de banda (pistas de auto-estrada) que está sendo usado de uma só vez. Em algum ponto cada pista vai ser levado para cima, de modo que os carros (dados) levará mais tempo para chegar até o destino.</p><h3>Distância</h3><p>Conexões como fibra óptica e cabeamento STP atendem longas distâncias, mas a conexão mais comum encontrada que no caso é DSL tem uma limitação de 5 km de distância de um cliente até um ponto base.</p><h3>Cotidiano</h3><p>As operadoras e provedores de internet vendem a conexão da seguinte forma:</p><h3>Link Flex ou Distribuido</h3><p>Aquele que pode concorrer a velocidade com outros usuários, e normalmente a velocidade contratada é especificada pelo download (via de acesso para baixar arquivos) um exemplo é a contratação de 10 mbps e o upload seria 1 mbps.Se tratando assim, você consegue baixar arquivos a 10 mbps (1,2 MBps analisando a transfêrencia do seu sistema operacional) e consegue enviar arquivos a 1 mbps (128 KBps).</p><h3>Link Dedicado ou Full</h3><p>Este não concorre com outros usuários, é dedicado apenas a aquele ponto e sua velocidade de conexão tanto de download como de upload são identicos.</p>",
+			"comments": [],
+			"slug": "como-funciona-a-velocidade-da-internet",
+			"created_at": "01/10/2021 14:35:09",
+			"updated_at": "01/10/2021 15:49:33"
+		}
+	],
+	"staff": [
+		{
+			"id": "7f9c1c22-98f6-4472-a031-d027b7196ba9",
+			"name": "ADMIN Alex",
+			"email": "admin@gmail.com",
+			"password": "$2a$12$0v0OSYD/CLAjRiYDc/9rIOFpA1BgHK83fGUEsOyld4O/uSv0pFYHq",
+			"admin": true,
+			"avatar": "admin_avatar.png",
+			"document": "44557777777",
+			"birthday": "2021-08-05",
+			"phone": {
+				"number": "999998888",
+				"ddd": "11",
+				"country": "+55"
+			},
+			"address": {
+				"zipcode": "17280000",
+				"street": "Avenida Paulista",
+				"street_number": "42",
+				"neighborhood": "Bairro Chique",
+				"city": "São Paulo",
+				"state": "SP",
+				"country": "Brazil"
+			},
+			"created_at": "10/08/2021 02:25:35",
+			"updated_at": "04/09/2021 18:45:39"
+		}
+	]
+}

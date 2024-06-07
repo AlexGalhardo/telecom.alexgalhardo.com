@@ -1,0 +1,177 @@
+{{>partials/header}}
+
+    {{#user}}
+
+    <main class="container col-lg-12 mt-3">
+
+        <!-- ROW -->
+        <div class="row">
+
+
+            {{#flash_success}}
+                <div class="text-center alert alert-success" role="alert">
+                    <b>{{flash_success}}</b>
+                </div>
+            {{/flash_success}}
+
+            {{#flash_warning}}
+                <div class="text-center alert alert-warning" role="alert">
+                    <b>{{flash_warning}}</b>
+                </div>
+            {{/flash_warning}}
+
+
+            <div class="alert alert-warning" role="alert">
+                <ul class="text-start">
+                    <li>Para alterar seus dados de cadastro ou seu plano, entre em contato com o nosso suporte (por email, telefone ou whatsapp) ou em nosso estabelecimento físico mais próximo de você.</li>
+                    <li>Se possuir mais alguma dúvida, talvez acessando <a href="duvidas-frequentes">Dúvidas Frequentes dos Nossos Clientes</a> possa te ajudar.</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="name" id="name" value="{{name}}"readonly>
+                  <label for="name">MEU NOME</label>
+                </div>
+
+                <small><span id="alert_email" class="fw-bold text-danger"></span></small>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="email" value="{{email}}" readonly>
+                  <label for="floatingInput">MEU EMAIL</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                      <input type="text" class="form-control" value="cliente45454545455" readonly>
+                      <label for="new_password">MINHA SENHA (primeiro nome + cpf)</label>
+                    </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" minlength="11" maxlength="11" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" class="form-control" id="document" name="document" value="{{cpf}}" readonly>
+                  <label for="document">MEU CPF</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" minlength="11" maxlength="11" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" class="form-control" id="document" name="document" value="{{rg}}" readonly>
+                  <label for="document">MEU RG</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input class="mb-2 form-control" id="phone" type="text" name="phone" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" minlength="11" maxlength="11" placeholder="Digit your cellphone" value="{{phone.country}}{{phone.ddd}}{{phone.number}}" readonly>
+                  <label for="phone">MEU TELEFONE PARA CONTATO</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                  <input class="form-control" type="text" name="birth_date" id="birth_date"  value="{{birthday}}" readonly>
+                  <label for="document">MINHA DATA DE NASCIMENTO</label>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="col-lg-4">
+
+                <div class="form-floating mb-3">
+                      <input placeholder="Digit your username" class="mb-2 form-control" name="created_at" type="text" value="{{created_at}}" readonly>
+                      <label for="name">CADASTRADO EM</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                      <input placeholder="Digit your username" class="mb-2 form-control" name="created_at" type="text" value="{{updated_at}}" readonly>
+                      <label for="name">ÚLTIMA ATUALIZAÇÃO DOS MEUS DADOS</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                      <input placeholder="Digit your username" class="mb-2 form-control" name="created_at" type="text" value="{{plan.instaled_at}}" readonly>
+                      <label for="name">INSTALAÇÃO TÉCNICA FEITA EM</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                      <input class="mb-2 form-control" id="zipcode" type="text" name="zipcode" pattern= "\d{5}-?\d{3}"  value="{{address.zipcode}}" readonly>
+                      <label for="zipcode">CEP</label>
+                    </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="street" id="street" value="{{address.street}}" onkeydown="return false;" readonly>
+                  <label for="street">ENDEREÇO</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input class="mb-2 form-control" type="number" min='1' max='9999' name="street_number" id="street_number" placeholder="Digit your street number" value="{{address.street_number}}" readonly>
+                  <label for="street_number">NÚMERO</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="mb-2 form-control" id="neighborhood" name="neighborhood" placeholder="Neighborhood" value="{{address.neighborhood}}" onkeydown="return false;" readonly>
+                  <label for="neighborhood">BAIRRO</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="mb-2 form-control" id="city" name="city" placeholder="City" value="{{address.city}}" onkeydown="return false;" readonly>
+                  <label for="city">CIDADE</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="mb-2 form-control" id="state" name="state" placeholder="State" value="{{address.state}}" onkeydown="return false;" readonly>
+                  <label for="state">ESTADO</label>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col-lg-4">
+
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" value="{{plan.name}}" readonly>
+                  <label for="name">MEU PLANO ATUAL</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="name" id="name" value="BOLETO" readonly>
+                  <label for="name">FORMA DE PAGAMENTO</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" value="20/11/2021" readonly>
+                  <label for="name">PAGAR PRÓXIMO BOLETO NA DATA</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="name" id="name" value="20/10/2021" readonly>
+                  <label for="name">ÚLTIMO BOLETO PAGO EM</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" value="R$ 109.90" readonly>
+                  <label for="name">VALOR PAGO DO ÚLTIMO BOLETO</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="email" value="20/11/2022" readonly>
+                  <label for="floatingInput">MEU PLANO VENCE EM</label>
+                </div>
+
+            </div>
+
+
+        {{/user}}
+
+
+        </div>
+        <!-- END ROW -->
+        
+    </main>
+
+
+    <script src="scripts/profile.js"></script>
+
+{{>partials/footer}}

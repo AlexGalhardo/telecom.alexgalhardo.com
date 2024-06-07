@@ -1,0 +1,21 @@
+#tag_body {
+    margin-top: 60px;
+    background-color: #F8F9FA;
+}
+
+#blog_body h3 {
+    margin-top:  40px;
+    margin-bottom:  10px;
+    color:  #9309AF;
+}
+
+.btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
+    background-color: #9309AF !important;
+    border-color:  #9309AF !important;
+}
+
+
+.btn-dark, .btn-dark:hover, .btn-dark:active, .btn-dark:visited {
+    background-color:  #FF8C00 !important;
+    border-color: #FF8C00 !important;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- TITLE -->
+    <title>{{header.title}}</title>
+
+    <!-- CHARSET -->
+    <meta charset="utf-8">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://galhardo-telecom.up.railway.app/">
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Com muita tecnologia e inovação, a Galhardo Telecom nasceu com uma proposta diferenciada para garantir a você a melhor experiência digital de todos os tempos.">.
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/images/apollo_logo.png">
+
+    <!-- ESSENCIAL SOCIAL MEDIA METATAGS -->
+    <meta property="og:url"                content="https://galhardo-telecom.up.railway.app/"/>
+    <meta property="og:title"              content="Galhardo Telecom"/>
+    <meta property="og:description"        content="Com muita tecnologia e inovação, a Galhardo Telecom nasceu com uma proposta diferenciada para garantir a você a melhor experiência digital de todos os tempos." />
+    <meta property="og:image"              content="images/favicon.png"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Galhardo Telecom">
+    <meta name="twitter:image:alt" content="Alt text for image">
+
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta property="fb:app_id" content="your_app_id" />
+    <meta name="twitter:site" content="@galhardo-telecom">
+
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- LOADING PAGE JS -->
+    <script src="/scripts/pace.min.js"></script>
+
+    <!-- LOADING PAGE CSS -->
+    <link rel="stylesheet" href="/css/minimal.css">
+
+    <!-- SCROLLBAR CSS -->
+    <link rel="stylesheet" href="/css/scroll_bar.css">
+
+    <!-- BOOTSTRAP 5 CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP 5 JS -->
+    <script src="/scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- BOOTSTRAP 5 ICONS -->
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+
+    <!-- COOKIES CSS -->
+    <link rel="stylesheet" href="/css/cookies.css">
+
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/de70268f9b096066f9f1d80a7/352086b85423ab9fa98cb4837.js");</script>
+
+    <!-- GOOGLE TAG MANAGER -->
+    <script async src="/scripts/google_tag_manager.js"></script>
+    <!-- https://www.googletagmanager.com/gtag/js?id=G-TKZ0EYZ31J -->
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TKZ0EYZ31J');
+    </script>
+
+</head>
+
+
+
+
+<body id="tag_body">
+
+    <div class="fixed-top bg-white shadow">
+
+        <nav class="container col-lg-12 navbar navbar-expand-lg fixed navbar-light bg-white">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="/">
+                    <img src="/images/apollo.png" height="40px" width="40px">
+                    <span style="color: #9309AF;" class="fw-bold">GALHARDO TELECOM</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link {{#header.navbar_blog_active}}fw-bold" style="color: #9309AF;"{{/header.navbar_blog_active}} aria-current="page" href="/blog">
+                            <i class="bi bi-pencil"></i>  Blog
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link {{#header.navbar_contact_active}}fw-bold" style="color: #9309AF;"{{/header.navbar_contact_active}} aria-current="page" href="/contato">
+                            <i class="bi bi-envelope"></i> Contato
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link {{#header.navbar_doubts_active}}fw-bold" style="color: #9309AF;"{{/header.navbar_doubts_active}} aria-current="page" href="/duvidas-frequentes">
+                            <i class="bi bi-question-lg"></i>  Dúvidas Frequentes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                            <i class="bi bi-facebook"></i> Facebook
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="https://github.com/alexGalhardo/galhardo-telecom/" target="_blank">
+                            <i class="bi bi-github"></i> Source Code
+                        </li>
+
+                        </ul>
+
+                        {{#user}}
+                        <ul class="navbar-nav me-auto mb-lg-0">
+                            <li class="nav-item dropdown mb-2">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                    <span class="fw-bold" style="color: #9309AF;">{{user.name}}</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {{^user.admin}}
+                                    <li>
+                                        <a class="dropdown-item fw-bold" href="/profile">
+                                            <i class="bi bi-pencil-square"></i>
+                                            Meu Perfil
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    {{/user.admin}}
+
+                                    {{#user.admin}}
+                                        <li>
+                                            <a class="dropdown-item fw-bold" href="/admin/create/blogPost">
+                                                <i class="bi bi-plus"></i>
+                                                Criar Postagem Blog
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold" href="/admin/clientes">
+                                                <i class="bi bi-person"></i>
+                                                Clientes Cadastrados
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold" href="/admin">
+                                                <i class="bi bi-file-bar-graph"></i>
+                                                Estatísticas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold" href="/admin/excel">
+                                                <i class="bi bi-file-bar-graph"></i>
+                                                Excel
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                    {{/user.admin}}
+                                    <li>
+                                        <a class="dropdown-item fw-bold" href="/profile/logout">
+                                            <i class="bi bi-x-lg"></i>
+                                            Sair
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        {{/user}}
+
+                        <div class="my-auto">
+                            {{^user}}
+                                <a href="/login" class="btn mb-2 shadow btn-light fw-bold text-white">Área do Cliente</a>
+                            {{/user}}
+                        </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+    {{{header.scroll_bar_div}}}
+

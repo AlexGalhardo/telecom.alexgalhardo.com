@@ -1,0 +1,98 @@
+{{>partials/header}}
+
+    <div class="container col-lg-6 mt-5 mb-3">
+
+        <div class="row">
+
+            <h1 class="mb-5 text-center fw-bold" style="color: #9309AF;">Trabalhe Conosco</h1>
+
+            <h4>Vagas Abertas:</h4>
+
+            <div class="accordion mt-3" id="accordionExample">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Vendedor(a)
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <h4 class="fw-bold">Descrição</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde enim ullam possimus quae dignissimos in sint, voluptatum autem labore rem minima quis error quas hic nemo deserunt laudantium fugit eveniet.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque, quo ex nesciunt aut perferendis pariatur adipisci modi quaerat iusto ut ab, earum quisquam quos soluta deleniti autem animi voluptate.</p>
+                    <h4 class="fw-bold">Requerimentos</h4>
+                    <ul>
+                      <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, inventore.</li>
+                      <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, inventore.</li>
+                      <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, inventore.</li>
+                    </ul>
+                    <h4 class="fw-bold">Benefícios</h4>
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores provident sit, quod odio reiciendis, sequi ut inventore culpa similique nemo. </li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reprehenderit rem deserunt aliquam, nesciunt in labore deleniti doloribus, ipsum.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo voluptate minima dolor sit sapiente asperiores ipsa</li>
+                    </ul>
+
+                    <h4 class="fw-bold">Se candidatar:</h4>
+                    <form action="/contato" method="POST" class="mt-1">
+
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+                    {{#flash_success}}
+                        <div class="text-center alert alert-success" role="alert">
+                            <b>{{flash_success}}</b>
+                        </div>
+                    {{/flash_success}}
+
+                    {{#flash_warning}}
+                        <div class="text-center alert alert-warning" role="alert">
+                            <b>{{flash_warning}}</b>
+                        </div>
+                    {{/flash_warning}}
+
+                    <div class="form-floating mb-3">
+                        <input type="txt" class="mb-3 form-control" id="name" name="name" required autofocus>
+                        <label for="name">Nome Completo</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="txt" class="mb-3 form-control" id="name" name="name" required autofocus>
+                        <label for="name">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" id="phone" name="phone" class="form-control" required>
+                        <label for="phone">Seu Telefone Para Contato</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" id="phone" name="phone" class="form-control" required>
+                        <label for="phone">Seu linkedin</label>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Currículo PDF</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Nos conte mais sobre sua experiência profissional e porque gostaria de trabalhar nessa posição</label>
+                        <small id="count" class="text-muted"></small>
+                        <textarea id="message" maxlength="1024" class="form-control" name="message" rows="7" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary shadow">Me candidatar para essa vaga</button>
+
+                </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{{>partials/footer}}

@@ -1,0 +1,109 @@
+<html lang="en-US">
+
+<head>
+
+    <title>Login - Galhardo Telecom</title>
+
+    <meta charset="utf-8">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/images/apollo_logo.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Entrar na sua conta de cliente da Galhardo Telecom">.
+
+    <!-- BOOTSTRAP 5 CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP 5 JS -->
+    <script src="/scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- BOOTSTRAP 5 ICONS -->
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+
+    <style>
+        .btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
+            background-color: #9309AF !important;
+            border-color:  #9309AF !important;
+        }
+    </style>
+
+</head>
+
+<body id="tag_body">
+
+    <div class="container col-lg-10">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <img src="/images/vetorial/image_login.png" class="w-100 img-fluid">
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4">
+
+			<a href="/" style="text-decoration: none;"><h3 class="text-center fw-bold mt-5" style="color: #9850AF">Galhardo Telecom</h3></a>
+
+            {{#flash_success}}
+                <div class="text-center alert alert-success" role="alert">
+                    <b>{{flash_success}}</b>
+                </div>
+            {{/flash_success}}
+
+            {{#flash_warning}}
+                <div class="text-center alert alert-warning" role="alert">
+                    <b>{{flash_warning}}</b>
+                </div>
+            {{/flash_warning}}
+
+            {{{captcha}}}
+
+            <form action="/login" method="POST" class="mt-5">
+
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+                <div class="form-floating mb-3">
+                    <input value="test@gmail.com"
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="Enter your email"
+                            autofocus
+                            required>
+                    <label for="email">Seu Email ou CPF</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="mb-3 form-control" id="password" name="password" placeholder="Enter your password" required value="test123">
+                    <label for="password">Sua Senha</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="shadow mb-3 w-100 btn btn-light btn-block text-white fw-bold">Entrar</button>
+                </div>
+
+            </form>
+
+            <div class="text-center">
+                <p>
+                    <a href="/esqueci-senha" class="text-decoration-none">
+                        <b>Esqueci Minha Senha</b>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/scripts/login.js"></script>
+
+</body>
+
+</html>
