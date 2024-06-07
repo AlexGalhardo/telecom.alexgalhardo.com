@@ -82,7 +82,6 @@ export default class AppController {
             };
 
             await NodeMailer.sendContact(contactObject);
-            await TelegramBOTLogger.logContact(contactObject);
 
             req.flash("success", "Mensagem Enviada!");
             return res.redirect("/contato");

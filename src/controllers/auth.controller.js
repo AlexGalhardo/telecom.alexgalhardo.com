@@ -1,8 +1,8 @@
 import { validationResult } from "express-validator";
 import NodeMailer from "../utils/NodeMailer.js";
-import Customers from "../repositories/customers.repository.js";
+import CustomersRepository from "../repositories/customers.repository.js";
 
-class AuthController {
+export default class AuthController {
     static async getViewLogin(req, res) {
         return res.render("pages/auth/login", {
             flash_success: req.flash("success"),
@@ -28,7 +28,7 @@ class AuthController {
 
             const { email, password } = req.body;
 
-            const userObject = await Customers.verifyLogin(email, password);
+            const userObject = await CustomersRepository.verifyLogin(email, password);
 
             if (!userObject) {
                 req.flash("warning", `Email ou senha inválidos!`);
@@ -60,7 +60,7 @@ class AuthController {
     static async verifyIfConfirmEmailURLIsValid(req, res) {
         const { email, token } = req.params;
 
-        const confirmEmailValid = await Customers.verifyConfirmEmailToken(email, token);
+        const confirmEmailValid = await CustomersRepository.verifyConfirmEmailToken(email, token);
 
         if (confirmEmailValid) {
             req.flash("success", "Email confirmado!");
@@ -92,7 +92,7 @@ class AuthController {
                 password,
             };
 
-            const userCreated = await Customers.create(userObject);
+            const userCreated = await CustomersRepository.create(userObject);
 
             if (userCreated) {
                 await NodeMailer.sendConfirmEmailLink(email);
@@ -115,7 +115,7 @@ class AuthController {
     static async postForgetPassword(req, res) {
         const { email } = req.body;
 
-        await Customers.createResetPasswordToken(email);
+        await CustomersRepository.createResetPasswordToken(email);
         await NodeMailer.sendForgetPasswordLink(email);
 
         req.flash("success", `Se esse email existe, vamos enviar um link no seu inbox para você recuperar sua senha!`);
@@ -158,7 +158,7 @@ class AuthController {
     static async postSendConfirmEmailLink(req, res) {
         const { email } = req.body;
 
-        const emailConfirmed = await Customers.verifyIfEmailIsConfirmed(email);
+        const emailConfirmed = await CustomersRepository.verifyIfEmailIsConfirmed(email);
 
         if (!emailConfirmed) {
             await NodeMailer.sendConfirmEmailLink(email);
@@ -171,5 +171,3 @@ class AuthController {
         return res.redirect("/confirmEmail");
     }
 }
-
-export default AuthController;

@@ -1,12 +1,11 @@
 import fs from "fs-extra";
 import { v4 as uuid } from "uuid";
 import randomToken from "rand-token";
-
 import Bcrypt from "../utils/Bcrypt.js";
 import DateTime from "../utils/DateTime.js";
-
 import database from "../config/database.js";
-class Users {
+
+export default class UsersRepository {
     static save(database) {
         fs.writeFileSync(database, JSON.stringify(database, null, 2), (error) => {
             if (error) {
@@ -23,7 +22,7 @@ class Users {
         }
     }
 
-    static getByID(user_id) {
+    static getById(user_id) {
         try {
             for (let i = 0; i < database.users.length; i++) {
                 if (database.users[i].id == user_id) return database.users[i];
@@ -291,5 +290,3 @@ class Users {
         }
     }
 }
-
-export default Users;

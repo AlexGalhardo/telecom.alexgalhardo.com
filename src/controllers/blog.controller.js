@@ -1,10 +1,10 @@
 import DateTime from "../utils/DateTime.js";
 import Header from "../utils/Header.js";
-import Blog from "../repositories/blog.repository.js";
+import BlogRepository from "../repositories/blog.repository.js";
 
-class BlogController {
+export default class BlogController {
     static async getViewBlog(req, res) {
-        const totalBlogPosts = await Blog.getTotal();
+        const totalBlogPosts = await BlogRepository.getTotal();
         const blogPostsPerPage = 4;
 
         let page = req.params.page;
@@ -13,7 +13,7 @@ class BlogController {
             page = 1;
         }
 
-        const blog = await Blog.getPostsByPageLimit(page, blogPostsPerPage);
+        const blog = await BlogRepository.getPostsByPageLimit(page, blogPostsPerPage);
 
         res.render("pages/blog/blog", {
             blog,
@@ -25,7 +25,7 @@ class BlogController {
     }
 
     static async getSearchBlogTitle(req, res) {
-        const blogPosts = await Blog.getAll();
+        const blogPosts = await BlogRepository.getAll();
         const searchBlogTitle = req.query.blogTitle;
 
         if (!searchBlogTitle) {
@@ -62,7 +62,7 @@ class BlogController {
     static async getViewBlogPost(req, res) {
         const slug = req.params.slug;
 
-        let blogPost = await Blog.getBySlug(slug);
+        let blogPost = await BlogRepository.getBySlug(slug);
 
         if (blogPost.comments.length) {
             blogPost = await BlogController.fixComments(blogPost);
@@ -75,10 +75,6 @@ class BlogController {
             blogPost,
             header: Header.blogPost(blogPost.title),
         });
-    }
-
-    static getRenderBootstrapPaginator(current, blogPostsPerPage, totalBlogPosts, searchBlogTitle) {
-        let prelinkUrl = "/blog/";
     }
 
     static async postBlogComment(req, res) {
@@ -94,7 +90,7 @@ class BlogController {
             created_at: DateTime.getNow(),
         };
 
-        const blogPost = await Blog.createComment(slug, blogComment);
+        const blogPost = await BlogRepository.createComment(slug, blogComment);
 
         if (!blogPost) {
             return res.redirect("/blog");
@@ -109,7 +105,7 @@ class BlogController {
     static async getDeleteBlogCommentByCommentID(req, res) {
         const { slug, comment_id } = req.params;
 
-        let blogPost = await Blog.deleteCommentByCommentID(slug, comment_id);
+        let blogPost = await BlogRepository.deleteCommentByCommentID(slug, comment_id);
 
         if (!blogPost) {
             return res.redirect(`/blog/${slug}`);
@@ -121,5 +117,3 @@ class BlogController {
         return res.redirect(`/blog/${slug}`);
     }
 }
-
-export default BlogController;

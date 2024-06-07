@@ -1,8 +1,9 @@
 import pagination from "pagination";
-import Blog from "../repositories/blog.repository.js";
+import BlogRepository from "../repositories/blog.repository.js";
+import CustomersRepository from "../repositories/customers.repository.js";
 import Header from "../utils/Header.js";
 
-class AdminController {
+export default class AdminController {
     static getViewAdminExcel(req, res) {
         return res.render("pages/admin/excel", {
             user: SESSION_USER,
@@ -18,8 +19,8 @@ class AdminController {
             page = 1;
         }
 
-        const customers = await Clientes.getCustomersByPageLimit(page, customersPerPage);
-        const totalCustomers = await MKAuth.getTotalCustomers();
+        const customers = await CustomersRepository.getCustomersByPageLimit(page, customersPerPage);
+        const totalCustomers = await CustomersRepository.getTotal();
 
         return res.render("pages/admin/customers", {
             user: SESSION_USER,
@@ -43,7 +44,7 @@ class AdminController {
 
         const totalCustomersFoundFromSearch = customersNameSearched.length;
 
-        const totalCustomers = await MKAuth.getTotalCustomers();
+        const totalCustomers = await MKAuth.getTotal();
 
         res.render("pages/admin/customers", {
             user: SESSION_USER,
@@ -171,7 +172,7 @@ class AdminController {
 
     static getViewUpdateBlogPost(req, res) {
         const blog_id = req.params.blog_id;
-        const blogPost = Blog.getByID(blog_id);
+        const blogPost = BlogRepository.getById(blog_id);
 
         res.render("pages/admin/updateBlogPost", {
             blogPost,
@@ -243,5 +244,3 @@ class AdminController {
         });
     }
 }
-
-export default AdminController;

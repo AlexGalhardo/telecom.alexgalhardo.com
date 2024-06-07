@@ -2,8 +2,8 @@ import fs from "fs-extra";
 import slugify from "slugify";
 import database from "../config/database.js";
 
-class Blog {
-    static save(database, error_message) {
+export default class BlogRepository {
+    static save(database) {
         for (let i = 0; i < database.blog.length; i++) {
             database.blog[i].id = i + 1;
         }
@@ -68,7 +68,7 @@ class Blog {
         }
     }
 
-    static getByID(blog_id) {
+    static getById(blog_id) {
         try {
             for (let i = 0; i < database.blog.length; i++) {
                 if (database.blog[i].id === parseInt(blog_id)) {
@@ -167,5 +167,3 @@ class Blog {
         }
     }
 }
-
-export default Blog;

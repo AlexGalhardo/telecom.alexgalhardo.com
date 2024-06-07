@@ -2,9 +2,9 @@ import handlebars from "handlebars";
 import fs from "fs-extra";
 import path from "path";
 import DateTime from "./DateTime.js";
-import { MailTrap } from "../config/smtp.js";
+import MailTrap from "../config/smtp.js";
 
-class NodeMailer {
+export default class NodeMailer {
     static async sendContact(contactObject) {
         const filePath = path.join(__dirname, "/views/emails/contact.html");
 
@@ -60,5 +60,3 @@ class NodeMailer {
         MailTrap.close();
     }
 }
-
-export default NodeMailer;

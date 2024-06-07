@@ -1,7 +1,7 @@
 import Header from "../utils/Header.js";
-import Customers from "../repositories/customers.repository.js";
+import CustomersRepository from "../repositories/customers.repository.js";
 
-class ProfileController {
+export default class ProfileController {
     static async getViewProfile(req, res) {
         return res.render("pages/profile/profile", {
             user: SESSION_USER,
@@ -56,11 +56,9 @@ class ProfileController {
             country,
         };
 
-        await Customers.update(userObject);
+        await CustomersRepository.update(userObject);
 
         req.flash("success", "Profile Information Updated!");
         return res.redirect("/profile");
     }
 }
-
-export default ProfileController;
